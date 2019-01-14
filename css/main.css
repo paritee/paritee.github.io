@@ -1,0 +1,40 @@
+img {
+
+image-rendering: pixelated; // Chrome 41+ and Opera 26+
+-ms-interpolation-mode: nearest-neighbor; // IE 7+ (non-standard property)
+image-rendering: -webkit-optimize-contrast; // Safari 6, UC Browser 9.9
+image-rendering: -webkit-crisp-edges; // Safari 7+
+image-rendering: -moz-crisp-edges; // Firefox 3.6+
+image-rendering: -o-crisp-edges; // Opera 12
+image-rendering: crisp-edges;
+}
+
+.fade {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+}
+
+.fade.is-faded {
+  opacity: 0;
+}
+
+.farm-animal-prefill {
+	position: relative;
+}
+
+.farm-animal-prefill .emote {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+
+.screenreader {
+    position: absolute !important; /* Outside the DOM flow */
+    height: 1px; width: 1px; /* Nearly collapsed */
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE 7+ only support clip without commas */
+    clip: rect(1px, 1px, 1px, 1px); /* All other browsers */
+}

@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>paritee.github.io</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <h1 class="screenreader">
+      paritee.github.io
+    </h1>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="./images/parrot.png" alt="paritee.github.io" title="paritee.github.io" width="32" height="32">
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#mods">
+            Mods
+          </a>
+          <a class="navbar-item" href="#generate-data-farmanimals-entry">
+            Generate Farm Animal Data
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <span id="mods" aria-hidden="trus"></span>
+
+    <div class="has-background-light">
+      <section class="section is-medium">
+        <div class="container">
+          <div class="content has-text-centered">
+            <h2 class="screenreader">Mods</h2>
+
+            <p class="title">
+              Hello, I'm Paritee
+            </p>
+
+            <p class="subtitle">
+              I make open-source mods for <a class="has-text-primary" href="https://www.stardewvalley.net" target="_blank">Stardew Valley</a>
+            </p>
+
+            <div class="buttons is-centered">
+                <a class="button is-primary" href="https://www.nexusmods.com/users/60632686">
+                  <span class="icon">
+                    <i class="fas fa-download"></i>
+                  </span>
+                  <span>
+                    Nexus
+                  </span>
+                </a>
+                <a class="button is-primary" href="https://github.com/paritee">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>
+                    Github
+                  </span>
+                </a>
+            </div>
+        </div>
+      </section>
+    </div>
+
+    <span id="generate-data-farmanimals-entry" aria-hidden="trus"></span>
+
+    <div class="has-background-link" style="min-height: 100vh">
+      <section class="section">
+        <div class="container">
+          <div class="content">
+            <h2 class="has-text-white">Generate Farm Animal Data</h2>
+
+            <div class="columns" style="max-height: 200px; overflow: auto;">
+              <div class="column is-one-fifth">
+                <p class="help has-text-white has-text-weight-semibold">
+                  Tap a farm animal to fill in their data or get started from scratch
+                </p>
+                <a class="button is-warning is-small is-outlined" onclick="return confirm('Are you sure you want to reset the data?')?resetData(event):'';" data-target="Basics">
+                  Reset
+                </a>
+              </div>
+              <div class="column has-text-centered farm-animal-prefill">
+                <a onclick="prefillData(event, 'White Cow')" data-target="Basics">
+                  <img src="./images/white_cow_sideways_full.png" width="64" height="64" alt="White Cow" title="Tap to fill in data for White Cow">
+                </a>
+                <img id="WhiteCowPrefillEmote" class="emote is-hidden-touch fade is-faded" src="./images/heart_emote.png" width="32" height="32" aria-hidden="true">
+                <img id="WhiteCowPrefillAngryEmote" class="emote is-hidden-touch fade is-faded" src="./images/angry_emote.png" width="32" height="32" aria-hidden="true">
+              </div>
+              <div class="column has-text-centered farm-animal-prefill">
+                <a onclick="prefillData(event, 'White Chicken')" data-target="Basics">
+                  <img src="./images/white_chicken_sideways_full.png" width="64" height="64" alt="White Chicken" title="Tap to fill in data for White Chicken">
+                </a>
+                <img id="WhiteChickenPrefillEmote" class="emote is-hidden-touch fade is-faded" src="./images/heart_emote.png" width="32" height="32" aria-hidden="true">
+              </div>
+              <div class="column has-text-centered farm-animal-prefill">
+                <a onclick="prefillData(event, 'Brown Cow')" data-target="Basics">
+                  <img src="./images/brown_cow_sideways_full.png" width="64" height="64" alt="Brown Cow" title="Tap to fill in data for Brown Cow">
+                </a>
+                <img id="BrownCowPrefillEmote" class="emote is-hidden-touch fade is-faded" src="./images/heart_emote.png" width="32" height="32" aria-hidden="true">
+              </div>
+              <div class="column has-text-centered farm-animal-prefill">
+                <a onclick="prefillData(event, 'Brown Chicken')" data-target="Basics">
+                  <img src="./images/brown_chicken_sideways_full.png" width="64" height="64" alt="Brown Chicken" title="Tap to fill in data for Brown Chicken">
+                </a>
+                <img id="BrownChickenPrefillEmote" class="emote is-hidden-touch fade is-faded" src="./images/heart_emote.png" width="32" height="32" aria-hidden="true">
+              </div>
+              <div class="column has-text-centered farm-animal-prefill">
+                <a onclick="prefillData(event, 'Goat')" data-target="Basics">
+                  <img src="./images/goat_sideways_full.png" width="64" height="64" alt="Goat" title="Tap to fill in data for Goat">
+                </a>
+                <img id="GoatPrefillEmote" class="emote is-hidden-touch fade is-faded" src="./images/heart_emote.png" width="32" height="32" aria-hidden="true">
+              </div>
+              <div class="column has-text-centered farm-animal-prefill">
+                <a onclick="prefillData(event, 'Duck')" data-target="Basics">
+                  <img src="./images/duck_sideways_full.png" width="64" height="64" alt="Duck" title="Tap to fill in data for Duck">
+                </a>
+                <img id="DuckPrefillEmote" class="emote is-hidden-touch fade is-faded" src="./images/heart_emote.png" width="32" height="32" aria-hidden="true">
+              </div>
+              <div class="column has-text-centered farm-animal-prefill">
+                <a onclick="prefillData(event, 'Sheep')" data-target="Basics">
+                  <img src="./images/sheep_sideways_full.png" width="64" height="64" alt="Sheep" title="Tap to fill in data for Sheep">
+                </a>
+                <img id="SheepPrefillEmote" class="emote is-hidden-touch fade is-faded" src="./images/heart_emote.png" width="32" height="32" aria-hidden="true">
+              </div>
+              <div class="column has-text-centered farm-animal-prefill">
+                <a onclick="prefillData(event, 'Rabbit')" data-target="Basics">
+                  <img src="./images/rabbit_sideways_full.png" width="64" height="64" alt="Rabbit" title="Rabbit">
+                </a>
+                <img id="RabbitPrefillEmote" class="emote is-hidden-touch fade is-faded" src="./images/heart_emote.png" width="32" height="32" aria-hidden="true">
+              </div>
+              <div class="column has-text-centered farm-animal-prefill">
+                <a onclick="prefillData(event, 'Pig')" data-target="Basics">
+                  <img src="./images/pig_sideways_full.png" width="64" height="64" alt="Pig" title="Tap to fill in data for Pig">
+                </a>
+                <img id="PigPrefillEmote" class="emote is-hidden-touch fade is-faded" src="./images/heart_emote.png" width="32" height="32" aria-hidden="true">
+              </div>
+              <div class="column has-text-centered farm-animal-prefill">
+                <a onclick="prefillData(event, 'Dinosaur')" data-target="Basics">
+                  <img src="./images/dinosaur_sideways_full.png" width="64" height="64" alt="Dinosaur" title="Tap to fill in data for Dinosaur">
+                </a>
+                <img id="DinosaurPrefillEmote" class="emote is-hidden-touch fade is-faded" src="./images/heart_emote.png" width="32" height="32" aria-hidden="true">
+              </div>
+            </div>
+          </div>
+
+          <div id="DataFarmAnimalsFields">
+            <div class="box">
+              <div class="columns">
+                <div class="column is-one-fifth">
+
+                  <nav class="panel">
+                    <a class="tab panel-block is-active" onclick="openTab(event)" data-target="Basics">
+                      Basics
+                    </a>
+                    <a class="tab panel-block" onclick="openTab(event)" data-target="Harvesting">
+                      Harvesting
+                    </a>
+                    <a class="tab panel-block" onclick="openTab(event)" data-target="Farm">
+                      Farm
+                    </a>
+                    <a class="tab panel-block" onclick="openTab(event)" data-target="Sprites">
+                      Sprites
+                    </a>
+                    <div class="panel-block">
+                      <div class="control content">
+                        <p>
+                          <span>Entry</span>
+
+                          <a id="CopyToClipboard" class="button is-link is-outlined is-small is-rounded is-pulled-right fade" onclick="copyToClipboard()">
+                            Copy
+                          </a>
+                        </p>
+
+                        <p>
+                          <code id="DataString" style="word-break: break-all; display: table;"></code>
+                          <input id="ToCopy" class="screenreader" tabindex="-1" aria-hidden="true">
+                        </p>
+
+                        <p>
+                          <a id="SaveUrl" class="is-size-7" href="#">
+                            <span class="icon">
+                              <i class="fas fa-link"></i>
+                            </span>
+                            Save for later
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+                <div class="column">
+                  <div class="content">
+                    <div id="Basics" class="content-tab">
+                      <h3>Basics</h3>
+
+                      <div class="section">
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="Type">
+                              <img src="./images/white_cow.png" width="16" height="16" aria-hidden="true">
+                              Type
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#data-entry" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <input id="Type" class="input" type="text" placeholder="White Cow" onchange="changeType();" data-field>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="DisplayType">
+                              <img src="./images/brown_cow.png" width="16" height="16" aria-hidden="true">
+                              Display Type
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <input id="DisplayType" class="input" type="text" placeholder="White Cow" onchange="updateData()" data-field="25">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="Sound">
+                              <img src="./images/sound.png" width="16" height="16" aria-hidden="true">
+                              Sound
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                                <div class="select is-fullwidth">
+                                  <select id="Sound" onchange="updateData()" data-field="4">
+                                    <option>none</option>
+                                    <option>50s</option>
+                                    <option>AbigailFlute</option>
+                                    <option>AbigailFluteDuet</option>
+                                    <option>achievement</option>
+                                    <option>aerobics</option>
+                                    <option>archaeo</option>
+                                    <option>axchop</option>
+                                    <option>axe</option>
+                                    <option>babblingBrook</option>
+                                    <option>backpackIN</option>
+                                    <option>barrelBreak</option>
+                                    <option>batFlap</option>
+                                    <option>batScreech</option>
+                                    <option>bigDeSelect</option>
+                                    <option>bigDrums</option>
+                                    <option>bigSelect</option>
+                                    <option>bob</option>
+                                    <option>boop</option>
+                                    <option>boulderBreak</option>
+                                    <option>boulderCrack</option>
+                                    <option>breakingGlass</option>
+                                    <option>breathin</option>
+                                    <option>breathout</option>
+                                    <option>breezy</option>
+                                    <option>bubbles</option>
+                                    <option>bugLevelLoop</option>
+                                    <option>busDoorOpen</option>
+                                    <option>busDriveOff</option>
+                                    <option>button1</option>
+                                    <option>cacklingWitch</option>
+                                    <option>cameraNoise</option>
+                                    <option>cancel</option>
+                                    <option>cast</option>
+                                    <option>cat</option>
+                                    <option>cavedrip</option>
+                                    <option>Cavern</option>
+                                    <option>christmasTheme</option>
+                                    <option>clam_tone</option>
+                                    <option>clank</option>
+                                    <option>Cloth</option>
+                                    <option>CloudCountry</option>
+                                    <option>clubhit</option>
+                                    <option>clubloop</option>
+                                    <option>clubSmash</option>
+                                    <option>clubswipe</option>
+                                    <option>cluck</option>
+                                    <option>coin</option>
+                                    <option>coldSpell</option>
+                                    <option>communityCenter</option>
+                                    <option selected>cow</option>
+                                    <option>cowboy_boss</option>
+                                    <option>cowboy_dead</option>
+                                    <option>cowboy_explosion</option>
+                                    <option>Cowboy_Footstep</option>
+                                    <option>cowboy_gopher</option>
+                                    <option>cowboy_gunload</option>
+                                    <option>Cowboy_gunshot</option>
+                                    <option>Cowboy_monsterDie</option>
+                                    <option>cowboy_monsterhit</option>
+                                    <option>cowboy_outlawsong</option>
+                                    <option>Cowboy_OVERWORLD</option>
+                                    <option>cowboy_powerup</option>
+                                    <option>Cowboy_Secret</option>
+                                    <option>Cowboy_singing</option>
+                                    <option>Cowboy_undead</option>
+                                    <option>cracklingFire</option>
+                                    <option>crafting</option>
+                                    <option>crickets</option>
+                                    <option>cricketsAmbient</option>
+                                    <option>crit</option>
+                                    <option>croak</option>
+                                    <option>crow</option>
+                                    <option>crystal</option>
+                                    <option>Crystal Bells</option>
+                                    <option>cut</option>
+                                    <option>Cyclops</option>
+                                    <option>daggerswipe</option>
+                                    <option>darkCaveLoop</option>
+                                    <option>death</option>
+                                    <option>debuffHit</option>
+                                    <option>debuffSpell</option>
+                                    <option>desolate</option>
+                                    <option>detector</option>
+                                    <option>dialogueCharacter</option>
+                                    <option>dialogueCharacterClose</option>
+                                    <option>dirtyHit</option>
+                                    <option>discoverMineral</option>
+                                    <option>distantBanjo</option>
+                                    <option>distantTrain</option>
+                                    <option>dog_bark</option>
+                                    <option>dog_pant</option>
+                                    <option>dogs</option>
+                                    <option>dogWhining</option>
+                                    <option>doorClose</option>
+                                    <option>doorCreak</option>
+                                    <option>doorCreakReverse</option>
+                                    <option>doorOpen</option>
+                                    <option>dropItemInWater</option>
+                                    <option>drumkit0</option>
+                                    <option>drumkit1</option>
+                                    <option>drumkit2</option>
+                                    <option>drumkit3</option>
+                                    <option>drumkit4</option>
+                                    <option>drumkit5</option>
+                                    <option>drumkit6</option>
+                                    <option>Duck</option>
+                                    <option>Duggy</option>
+                                    <option>dustMeep</option>
+                                    <option>dwoop</option>
+                                    <option>dwop</option>
+                                    <option>EarthMine</option>
+                                    <option>eat</option>
+                                    <option>echos</option>
+                                    <option>elliottPiano</option>
+                                    <option>EmilyDance</option>
+                                    <option>EmilyDream</option>
+                                    <option>EmilyTheme</option>
+                                    <option>event1</option>
+                                    <option>event2</option>
+                                    <option>explosion</option>
+                                    <option>fall_day_ambient</option>
+                                    <option>fall1</option>
+                                    <option>fall2</option>
+                                    <option>fall3</option>
+                                    <option>fallDown</option>
+                                    <option>fallFest</option>
+                                    <option>fastReel</option>
+                                    <option>fireball</option>
+                                    <option>fishBite</option>
+                                    <option>fishEscape</option>
+                                    <option>FishHit</option>
+                                    <option>fishingRodBend</option>
+                                    <option>fishSlap</option>
+                                    <option>flameSpell</option>
+                                    <option>flameSpellHit</option>
+                                    <option>FlowerDance</option>
+                                    <option>flute</option>
+                                    <option>flybuzzing</option>
+                                    <option>Frost_Ambient</option>
+                                    <option>FrostMine</option>
+                                    <option>furnace</option>
+                                    <option>fuse</option>
+                                    <option>getNewSpecialItem</option>
+                                    <option>ghost</option>
+                                    <option>Ghost Synth</option>
+                                    <option>give_gift</option>
+                                    <option>glug</option>
+                                    <option>goat</option>
+                                    <option>grandpas_theme</option>
+                                    <option>grassyStep</option>
+                                    <option>grunt</option>
+                                    <option>gulp</option>
+                                    <option>gusviolin</option>
+                                    <option>hammer</option>
+                                    <option>harvest</option>
+                                    <option>healSound</option>
+                                    <option>heavy</option>
+                                    <option>heavyEngine</option>
+                                    <option>hitEnemy</option>
+                                    <option>hoeHit</option>
+                                    <option>honkytonky</option>
+                                    <option>Hospital_Ambient</option>
+                                    <option>Icicles</option>
+                                    <option>jaunty</option>
+                                    <option>jingle1</option>
+                                    <option>jojaOfficeSoundscape</option>
+                                    <option>junimoMeep1</option>
+                                    <option>junimoStarSong</option>
+                                    <option>keyboardTyping</option>
+                                    <option>killAnimal</option>
+                                    <option>kindadumbautumn</option>
+                                    <option>Lava_Ambient</option>
+                                    <option>LavaMine</option>
+                                    <option>leafrustle</option>
+                                    <option>libraryTheme</option>
+                                    <option>MainTheme</option>
+                                    <option>Majestic</option>
+                                    <option>MarlonsTheme</option>
+                                    <option>marnieShop</option>
+                                    <option>Meteorite</option>
+                                    <option>Milking</option>
+                                    <option>minecartLoop</option>
+                                    <option>money</option>
+                                    <option>moneyDial</option>
+                                    <option>monsterdead</option>
+                                    <option>moonlightJellies</option>
+                                    <option>mouseClick</option>
+                                    <option>musicboxsong</option>
+                                    <option>Near The Planet Core</option>
+                                    <option>New Snow</option>
+                                    <option>newArtifact</option>
+                                    <option>newRecipe</option>
+                                    <option>newRecord</option>
+                                    <option>nightTime</option>
+                                    <option>objectiveComplete</option>
+                                    <option>ocean</option>
+                                    <option>Of Dwarves</option>
+                                    <option>openBox</option>
+                                    <option>openChest</option>
+                                    <option>Orange</option>
+                                    <option>Overcast</option>
+                                    <option>ow</option>
+                                    <option>owl</option>
+                                    <option>parrot</option>
+                                    <option>parry</option>
+                                    <option>phone</option>
+                                    <option>Pickup_Coin15</option>
+                                    <option>pickUpItem</option>
+                                    <option>pig</option>
+                                    <option>Pink Petals</option>
+                                    <option>playful</option>
+                                    <option>Plums</option>
+                                    <option>pool_ambient</option>
+                                    <option>poppy</option>
+                                    <option>potterySmash</option>
+                                    <option>powerup</option>
+                                    <option>pullItemFromWater</option>
+                                    <option>purchase</option>
+                                    <option>purchaseClick</option>
+                                    <option>purchaseRepeat</option>
+                                    <option>questcomplete</option>
+                                    <option>rabbit</option>
+                                    <option>ragtime</option>
+                                    <option>rain</option>
+                                    <option>rainsound</option>
+                                    <option>reward</option>
+                                    <option>roadnoise</option>
+                                    <option>robotBLASTOFF</option>
+                                    <option>robotSoundEffects</option>
+                                    <option>rockGolemDie</option>
+                                    <option>rockGolemHit</option>
+                                    <option>rockGolemSpawn</option>
+                                    <option>rooster</option>
+                                    <option>sadpiano</option>
+                                    <option>Saloon1</option>
+                                    <option>sampractice</option>
+                                    <option>sandyStep</option>
+                                    <option>sappypiano</option>
+                                    <option>scissors</option>
+                                    <option>seagulls</option>
+                                    <option>Secret Gnomes</option>
+                                    <option>secret1</option>
+                                    <option>seeds</option>
+                                    <option>select</option>
+                                    <option>sell</option>
+                                    <option>serpentDie</option>
+                                    <option>serpentHit</option>
+                                    <option>SettlingIn</option>
+                                    <option>shadowDie</option>
+                                    <option>shadowHit</option>
+                                    <option>shadowpeep</option>
+                                    <option>shaneTheme</option>
+                                    <option>sheep</option>
+                                    <option>shimmeringbastion</option>
+                                    <option>shiny4</option>
+                                    <option>Ship</option>
+                                    <option>shwip</option>
+                                    <option>SinWave</option>
+                                    <option>sipTea</option>
+                                    <option>skeletonDie</option>
+                                    <option>skeletonHit</option>
+                                    <option>skeletonStep</option>
+                                    <option>slime</option>
+                                    <option>slimedead</option>
+                                    <option>slimeHit</option>
+                                    <option>slingshot</option>
+                                    <option>slosh</option>
+                                    <option>slowReel</option>
+                                    <option>smallSelect</option>
+                                    <option>snowyStep</option>
+                                    <option>spaceMusic</option>
+                                    <option>spirits_eve</option>
+                                    <option>spring_day_ambient</option>
+                                    <option>spring_night_ambient</option>
+                                    <option>spring1</option>
+                                    <option>spring2</option>
+                                    <option>spring3</option>
+                                    <option>SpringBirds</option>
+                                    <option>springsongs</option>
+                                    <option>springtown</option>
+                                    <option>Stadium_ambient</option>
+                                    <option>Stadium_cheer</option>
+                                    <option>stairsdown</option>
+                                    <option>stardrop</option>
+                                    <option>starshoot</option>
+                                    <option>stoneCrack</option>
+                                    <option>stoneStep</option>
+                                    <option>stumpCrack</option>
+                                    <option>summer_day_ambient</option>
+                                    <option>summer1</option>
+                                    <option>summer2</option>
+                                    <option>summer3</option>
+                                    <option>sweet</option>
+                                    <option>swordswipe</option>
+                                    <option>throw</option>
+                                    <option>throwDownITem</option>
+                                    <option>thudStep</option>
+                                    <option>thunder</option>
+                                    <option>thunder_small</option>
+                                    <option>tickTock</option>
+                                    <option>tinymusicbox</option>
+                                    <option>tinyWhip</option>
+                                    <option>title_night</option>
+                                    <option>toolCharge</option>
+                                    <option>toolSwap</option>
+                                    <option>toyPiano</option>
+                                    <option>trainLoop</option>
+                                    <option>trainWhistle</option>
+                                    <option>trashcan</option>
+                                    <option>trashcanlid</option>
+                                    <option>treecrack</option>
+                                    <option>treethud</option>
+                                    <option>tribal</option>
+                                    <option>Tropical Jam</option>
+                                    <option>UFO</option>
+                                    <option>Upper_Ambient</option>
+                                    <option>wand</option>
+                                    <option>warrior</option>
+                                    <option>wateringCan</option>
+                                    <option>waterSlosh</option>
+                                    <option>wavy</option>
+                                    <option>wedding</option>
+                                    <option>whistle</option>
+                                    <option>wind</option>
+                                    <option>winter_day_ambient</option>
+                                    <option>winter1</option>
+                                    <option>winter2</option>
+                                    <option>winter3</option>
+                                    <option>WizardSong</option>
+                                    <option>woodsTheme</option>
+                                    <option>woodWhack</option>
+                                    <option>woodyHit</option>
+                                    <option>woodyStep</option>
+                                    <option>XOR</option>
+                                    <option>yoba</option>
+                                  </select>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal is-grouped">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <!-- Left empty for spacing -->
+                          </div>
+                          <p class="control">
+                            <button class="button" onclick="openTab(event)" data-target="Harvesting">
+                              Next
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="Harvesting" class="content-tab" hidden>
+                      <h3>Harvesting</h3>
+
+                      <div class="section">
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="DefaultProduce">
+                              <img src="./images/milk.png" width="16" height="16" aria-hidden="true">
+                              Default Produce
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control is-expanded">
+                                  <input id="DefaultProduce" class="input" type="number" min="-1" placeholder="184" onchange="updateData()" data-field="2">
+                                </p>
+                                <p class="control">
+                                  <label class="checkbox button">
+                                    <input id="ToggleDefaultProduce" type="checkbox" onchange="toggleProduce(event, 'DefaultProduce')">
+                                    None
+                                  </label>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="DeluxeProduce">
+                              <img src="./images/large_milk.png" width="16" height="16" aria-hidden="true">
+                              Deluxe Produce
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control is-expanded">
+                                  <input id="DeluxeProduce" class="input" type="number" min="-1" placeholder="186" onchange="updateData()" data-field="3">
+                                </p>
+                                <p class="control">
+                                  <label class="checkbox button">
+                                    <input id="ToggleDeluxeProduce" type="checkbox" onchange="toggleProduce(event, 'DeluxeProduce')">
+                                    None
+                                  </label>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="HarvestType">
+                              <img src="./images/rancher.png" width="16" height="16" aria-hidden="true">
+                              Harvest Type
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <div class="select is-fullwidth">
+                                  <select id="HarvestType" onchange="updateData()" data-field="13">
+                                    <option value="0">No tool</option>
+                                    <option value="1" selected>Tool required</option>
+                                  </select>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="HarvestTool">
+                              <img src="./images/milk_pail.png" width="16" height="16" aria-hidden="true">
+                              Tool for Harvesting
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <input id="HarvestTool" class="input" type="text" placeholder="Milk Pail" onchange="updateData()" data-field="22">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="DaysUntilMature">
+                              <img src="./images/baby_white_cow.png" width="16" height="16" aria-hidden="true">
+                              Days Until Mature
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <input id="DaysUntilMature" class="input" type="number" min="1" placeholder="5" onchange="updateData()" data-field="1">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="DaysBetweenHarvests">
+                              <img src="./images/angry_emote.png" width="16" height="16" aria-hidden="true">
+                              Days Between Harvests
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                                <p class="control is-expanded">
+                                  <input id="DaysBetweenHarvests" class="input" type="number" min="1" placeholder="1" onchange="updateData()" data-field="0">
+                                </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="ChangeTextureWhenReadyToHarvest">
+                              <img src="./images/shears.png" width="16" height="16" aria-hidden="true">
+                              Change Texture When Ready to Harvest
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <div class="select is-fullwidth">
+                                  <select id="ChangeTextureWhenReadyToHarvest" onchange="updateData()" data-field="14">
+                                    <option value="true">Yes</option>
+                                    <option value="false" selected>No</option>
+                                  </select>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="MeatIndex">
+                              <img src="./images/beef.png" width="16" height="16" aria-hidden="true">
+                              Meat Index
+                            </label>
+                            <p class="help">
+                              <span class="tag is-danger is-rounded">
+                                Not used
+                              </span>
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <input id="MeatIndex" class="input" type="number" min="0" placeholder="639" onchange="updateData()" data-field="23">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal is-grouped">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <!-- Left empty for spacing -->
+                          </div>
+                          <p class="control">
+                            <button class="button" onclick="openTab(event)" data-target="Farm">
+                              Next
+                            </button>
+                          </p>
+                          <p class="control">
+                            <button class="button is-light" onclick="openTab(event)" data-target="Basics">
+                              Previous
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="Farm" class="content-tab" hidden>
+                      <h3>Farm</h3>
+
+                      <div class="section">
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="Purchase Price">
+                              <img src="./images/animal_shop.png" width="16" height="16" aria-hidden="true">
+                              Purchase Price
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control is-expanded">
+                                  <input id="Purchase Price" class="input" type="number" min="0" placeholder="1500" onchange="updateData()" data-field="24">
+                                </p>
+                                <p class="control">
+                                  <span class="button is-static">
+                                    <img src="./images/coin.png" alt="Gold Coin" title="Gold">
+                                  </span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="BuildingToLiveIn">
+                              <img src="./images/hammer.png" width="16" height="16" aria-hidden="true">
+                              Building to Live In
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <div class="select is-fullwidth">
+                                  <select id="BuildingToLiveIn" onchange="changeHouse();" data-field="15">
+                                    <option selected>Barn</option>
+                                    <option>Coop</option>
+                                  </select>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="DisplayHouse">
+                              <img src="./images/animal_house.png" width="16" height="16" aria-hidden="true">
+                              Display House
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <input id="DisplayHouse" class="input" type="text" placeholder="Barn" onchange="updateData()" data-field="26">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="DailyFullnessDrain">
+                              <img src="./images/hay.png" width="16" height="16" aria-hidden="true">
+                              Daily Fullness Drain
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <input id="DailyFullnessDrain" class="input" type="number" min="0" placeholder="15" onchange="updateData()" data-field="20">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="DailyHappinessDrain">
+                              <img src="./images/heart_emote.png" width="16" height="16" aria-hidden="true">
+                              Daily Happiness Drain
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <p class="control is-expanded">
+                                <input id="DailyHappinessDrain" class="input" type="number" min="0" placeholder="5" onchange="updateData()" data-field="21">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal is-grouped">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <!-- Left empty for spacing -->
+                          </div>
+                          <p class="control">
+                            <button class="button" onclick="openTab(event)" data-target="Sprites">
+                              Next
+                            </button>
+                          </p>
+                          <p class="control">
+                            <button class="button is-light" onclick="openTab(event)" data-target="Harvesting">
+                              Previous
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="Sprites" class="content-tab" hidden>
+                      <h3>Sprites</h3>
+
+                      <div class="section">
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="FrontBackSourceRect_Width">
+                              <img src="./images/white_cow_front.png" width="16" height="16" aria-hidden="true">
+                              Front/Back Source Rectangle
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Width
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="FrontBackSourceRect_Width" class="input" type="number" min="1" placeholder="32" onchange="updateData()" data-field="16">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Height
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="FrontBackSourceRect_Height" class="input" type="number" min="1" placeholder="32" onchange="updateData()" data-field="17">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="SidewaysSourceRect_Width">
+                              <img src="./images/white_cow_sideways.png" width="16" height="16" aria-hidden="true">
+                              Sideways Source Rectangle
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Width
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="SidewaysSourceRect_Width" class="input" type="number" min="1" placeholder="32" onchange="updateData()" data-field="18">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Height
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="SidewaysSourceRect_Height" class="input" type="number" min="1" placeholder="32" onchange="updateData()" data-field="19">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="FrontBackBoundingBox_X">
+                              <img src="./images/baby_white_cow_front.png" width="16" height="16" aria-hidden="true">
+                              Front/Back Bounding Box
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    X
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="FrontBackBoundingBox_X" class="input" type="number" min="1" placeholder="36" onchange="updateData()" data-field="5">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Y
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="FrontBackBoundingBox_Y" class="input" type="number" min="1" placeholder="64" onchange="updateData()" data-field="6">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Width
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="FrontBackBoundingBox_Width" class="input" type="number" min="1" placeholder="64" onchange="updateData()" data-field="7">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Height
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="FrontBackBoundingBox_Height" class="input" type="number" min="1" placeholder="64" onchange="updateData()" data-field="8">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal columns is-vcentered">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <label class="label" for="SidewaysBoundingBox_X">
+                              <img src="./images/baby_white_cow_sideways.png" width="16" height="16" aria-hidden="true">
+                              Sideways Bounding Box
+                            </label>
+                            <p class="help">
+                              <a href="https://github.com/paritee/sandbox/blob/master/README.md#values" target="_blank">
+                                What is this?
+                              </a>
+                            </p>
+                          </div>
+                          <div class="field-body">
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    X
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="SidewaysBoundingBox_X" class="input" type="number" min="1" placeholder="36" onchange="updateData()" data-field="9">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Y
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="SidewaysBoundingBox_Y" class="input" type="number" min="1" placeholder="64" onchange="updateData()" data-field="10">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Width
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="SidewaysBoundingBox_Width" class="input" type="number" min="1" placeholder="64" onchange="updateData()" data-field="11">
+                                </p>
+                              </div>
+                            </div>
+                            <div class="field is-expanded">
+                              <div class="field has-addons">
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Height
+                                  </a>
+                                </p>
+                                <p class="control is-expanded">
+                                  <input id="SidewaysBoundingBox_Height" class="input" type="number" min="1" placeholder="64" onchange="updateData()" data-field="12">
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="field is-horizontal is-grouped">
+                          <div class="field-label is-normal column is-one-quarter">
+                            <!-- Left empty for spacing -->
+                          </div>
+                          <p class="control">
+                            <button class="button is-link" onclick="copyToClipboard()">
+                              Copy entry
+                            </button>
+                          </p>
+                          <p class="control">
+                            <button class="button is-light" onclick="openTab(event)" data-target="Farm">
+                              Previous
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="hero is-dark has-text-centered">
+      <div class="hero-body">
+          <div class="container">
+             <div class="columns">
+              <div class="column is-8-desktop is-offset-2-desktop">
+                <p>
+                <a class="button is-dark" target="_blank" href="https://github.com/paritee">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>
+                    paritee @ Github
+                  </span>
+                </a>
+                </p>
+                <p>
+                  <small>
+                    Made with <img src="./images/hay.png" alt="hay" title="hay">
+                  </small>
+                </p>
+                <p style="margin-top: 1rem;">
+                  <small>
+                    All Stardew Valley content and materials are trademarks and copyrights of <a href="https://www.stardewvalley.net" target="_blank">ConcernedApe</a>. All rights reserved.
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="lib/main.js"></script>
+  </body>
+</html>
