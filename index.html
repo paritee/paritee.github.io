@@ -150,7 +150,7 @@
                 <p class="help has-text-white has-text-weight-semibold">
                   Tap a farm animal to fill in their data or get started from scratch
                 </p>
-                <a class="button is-warning is-small is-outlined" onclick="return confirm('Are you sure you want to reset the data?')?resetData(event); ga('send', 'event', 'Farm Animal Data Form', 'reset', 'Reset Data');:'';" data-target="Basics">
+                <a class="button is-warning is-small is-outlined" onclick="if confirm('Are you sure you want to reset the data?'){resetData(event); ga('send', 'event', 'Farm Animal Data Form', 'reset', 'Reset Data');}" data-target="Basics">
                   Reset
                 </a>
               </div>
