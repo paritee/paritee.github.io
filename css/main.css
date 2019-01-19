@@ -37,3 +37,9 @@ img {
 	top: 8px;
 	right: 8px;
 }
+
+.mod-background-image {
+  min-height: 128px;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
